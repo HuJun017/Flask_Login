@@ -1,16 +1,20 @@
 from flask import Flask, render_template
-import pandas as pd
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def homepage():
     return render_template("home.html")
 
-@app.route('/elenco_utenti', methods=['GET'])
+@app.route('/elenco')
 def information():
     import pandas as pd
-    df = pd.read_csv("/workspace/Flask_Login/users.csv")
-    return render_template('json.html', elenco = df.to_html())
+    df = pd.read_csv("/workspace/Flask_Login/data/users.csv")
+    info = df.username
+    return render_template('json.html', tabella = df.to_json())
+
+@app.route('/test')
+def test_page():
+    return render_template('test_page.html')
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3245, debug=True)
