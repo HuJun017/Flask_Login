@@ -8,10 +8,24 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <h1>Welcome to the Homepage</h1>
-        <input type="text" placeholder="Enter your username" id="usernameInput">
-        <input type="text" placeholder="Enter your account" id="accountInput">
-        <input type="text" placeholder="Enter your password" id="passwordInput">
-        <button onclick="getElenco()" id="infoButton">Enter</button>
+        <div class="container">
+            <h1>Welcome to the Homepage</h1>
+            <!--username-->
+            <div class="inline_block">
+                <p>Username:</p>
+                <input type="text" placeholder="Enter your username" id="usernameInput">                
+            </div>
+            <!--account-->
+            <div class="inline_block">
+                <p>Account:</p>
+                <input type="text" placeholder="Enter your account" id="accountInput">    
+            </div>
+            <!--password-->
+            <div class="inline_block">
+                <p>Password:</p>
+                <input type="text" placeholder="Enter your password" id="passwordInput">
+            </div>
+            <button onclick="getElenco()" id="infoButton">Enter</button>
+        </div>
     </body>
 </html>
