@@ -7,7 +7,7 @@ function getElenco() {
     let i = 0; //indice
     
     //estrazione dati
-    fetch('https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu110.gitpod.io/elenco')
+    fetch('https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu111.gitpod.io/elenco')
     .then(response => response.json())
     .then(data => {
         //visualizzazione dei dati
@@ -24,7 +24,7 @@ function getElenco() {
         //check per vedere se il password è stato trovato
         if (trovato) {
             console.log("La password è stata trovata!");
-            window.location.href = "https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu110.gitpod.io/test"
+            window.location.href = "https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu111.gitpod.io/test"
         } else {
             console.log("La password non è stata trovata.");
         }
