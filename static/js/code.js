@@ -1,10 +1,10 @@
 function getElenco() {
     let usernameInput = document.getElementById('usernameInput').value;
-    let accountInput = document.getElementById('accountInput').value;
+    let emailInput = document.getElementById('emailInput').value;
     let passwordInput = document.getElementById('passwordInput').value;
     let user = {
         username: usernameInput,
-        account: accountInput,
+        email: emailInput,
         password: passwordInput
     };
 

@@ -20,14 +20,14 @@ def post_information():
         return jsonify({'error': 'I dati non sono stati inviati correttamente'}), 400
 
     username = data.get('username')
-    account = data.get('account')
+    email = data.get('email')
     password = data.get('password')
     check = False
 
     # ciclo per trovare l'utente
     users_dict = df.to_dict(orient='records')
     for user in users_dict:
-        if user['username'] == username and user['account'] == account and user['password'] == password:
+        if user['username'] == username and user['email'] == email and user['password'] == password:
             check = True
 
     return jsonify(users_dict, check), 200
