@@ -8,7 +8,7 @@ function getElenco() {
         password: passwordInput
     };
 
-    fetch('https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu111.gitpod.io/elenco', {
+    fetch('https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu114.gitpod.io/elenco', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ function getElenco() {
         console.log(data);
         console.log(data[1]);
         if (data[1] === true) {
-            window.location.href = 'https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu111.gitpod.io/test';
+            window.location.href = 'https://3245-hujun017-flasklogin-iwzllonrxe7.ws-eu114.gitpod.io/test';
         }
         else {
             alert('utente inesistente, controlla di aver inserito i dati correttamente!')
